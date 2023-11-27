@@ -1,10 +1,7 @@
 package digital.project.bookstorejava.console;
 
 import digital.project.bookstorejava.basedados.Banco;
-import digital.project.bookstorejava.entidade.Cliente;
-import digital.project.bookstorejava.entidade.Cupom;
-import digital.project.bookstorejava.entidade.Livro;
-import digital.project.bookstorejava.entidade.Pedido;
+import digital.project.bookstorejava.entidade.*;
 import digital.project.bookstorejava.negocio.ClienteNegocio;
 import digital.project.bookstorejava.negocio.PedidoNegocio;
 import digital.project.bookstorejava.negocio.ProdutoNegocio;
@@ -92,9 +89,10 @@ public class Start {
                     break;
                 case "7":
                     produtoNegocio.listarTodos();
-                    break;
+                break;
                 case "8":
                     pedidoNegocio.listarTodos();
+
                     break;
                 case "9":
                     System.out.println(String.format

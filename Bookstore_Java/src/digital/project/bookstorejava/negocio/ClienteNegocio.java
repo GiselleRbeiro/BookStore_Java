@@ -24,10 +24,4 @@ public class ClienteNegocio {
             return Optional.empty();
         }
     }
-
-
-    //TODO Fazer a inclusão de cliente
-
-    //TODO Fazer a exclusão de cliente
-
 }

@@ -8,8 +8,8 @@ public class Pedido {
     private String codigo;
     private Cliente cliente;
     private List<Produto> produtos;
-    private double total;
 
+    private double total;
 
     public Pedido() {
         this.produtos = new ArrayList<>();
@@ -31,14 +31,6 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public List<Produto> getProdutos() {
-        return produtos;
-    }
-
-    public void setProdutos(List<Produto> produtos) {
-        this.produtos = produtos;
-    }
-
     public double getTotal() {
         return total;
     }
@@ -47,7 +39,13 @@ public class Pedido {
         this.total = total;
     }
 
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
 
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
 
     private String getProdutosComprados() {
 

@@ -31,7 +31,6 @@ public class Livro extends Produto {
     public double calcularFrete() {
         return (getPreco() * getQuantidade()) * (1 + genero.getFator());
     }
-
     @Override
     public String toString() {
         return "Livro{" +

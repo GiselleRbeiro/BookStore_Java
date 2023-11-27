@@ -1,11 +1,9 @@
 package digital.project.bookstorejava.utilidade;
 
 import digital.project.bookstorejava.basedados.Banco;
-import digital.project.bookstorejava.entidade.Cupom;
-import digital.project.bookstorejava.entidade.Livro;
-import digital.project.bookstorejava.entidade.Pedido;
-import digital.project.bookstorejava.entidade.Produto;
+import digital.project.bookstorejava.entidade.*;
 import digital.project.bookstorejava.entidade.constantes.Genero;
+import digital.project.bookstorejava.entidade.constantes.Materias;
 import digital.project.bookstorejava.negocio.ProdutoNegocio;
 
 import java.util.Optional;
@@ -48,9 +46,21 @@ public final class LeitoraDados {
 
 		return livro;
 	}
+	public static Caderno lerCaderno() {
 
+		System.out.println("Cadastrando caderno...");
+		Caderno caderno = new Caderno();
 
-	//TODO Método para ler o caderno
+		System.out.println("Digite a quantidade de matérias: M2, M5, M10");
+		String materias = lerDado();
+		caderno.setTipo(Materias.valueOf(materias.toUpperCase()));
+
+		System.out.println("Digite o preço(padrão 0.0)");
+		String preco = lerDado();
+		caderno.setPreco(Double.parseDouble(preco));
+
+		return caderno;
+	}
 
 
 	public static Pedido lerPedido(Banco banco) {
